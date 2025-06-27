@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacancy Categories - ISKOOLJOB.COM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .category-tab {
+            cursor: pointer;
+            transition: all 0.3s;
+            padding: 20px 10px;
+            border-radius: 8px 8px 0 0;
+        }
+        .category-tab:hover {
+            background-color: #f0f8ff;
+        }
+        .category-tab.active {
+            background-color: #3498db;
+            color: white;
+        }
+        .position-card {
+            transition: transform 0.3s;
+            margin-bottom: 15px;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .position-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .position-title {
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .position-category {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 0.8rem;
+        }
+        .position-description {
+            color: #555;
+            font-size: 0.95rem;
+        }
+        .badge-teaching {
+            background-color: #2ecc71;
+        }
+        .badge-leadership {
+            background-color: #3498db;
+        }
+        .badge-admin {
+            background-color: #f39c12;
+        }
+        .badge-support {
+            background-color: #7f8c8d;
+        }
+        .category-icon {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (same as other pages) -->
+
+    <section class="vacancy-categories py-5">
+        <div class="container">
+            <h1 class="text-center mb-5">Explore School Positions</h1>
+            
+            <!-- Category Tabs -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+                        <div class="category-tab active" data-category="teaching">
+                            <div class="category-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                            <h4>Teaching Staff</h4>
+                        </div>
+                        <div class="category-tab" data-category="leadership">
+                            <div class="category-icon"><i class="fas fa-user-tie"></i></div>
+                            <h4>Leadership</h4>
+                        </div>
+                        <div class="category-tab" data-category="admin">
+                            <div class="category-icon"><i class="fas fa-clipboard-list"></i></div>
+                            <h4>Administrative</h4>
+                        </div>
+                        <div class="category-tab" data-category="support">
+                            <div class="category-icon"><i class="fas fa-tools"></i></div>
+                            <h4>Support Staff</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Positions Grid -->
+            <div class="row g-4" id="positionsContainer">
+                
+                <!-- ========== TEACHING STAFF ========== -->
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card teaching">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-teaching position-category">Teaching</span>
+                            <h5 class="position-title">PGT (Post Graduate Teacher)</h5>
+                            <p class="position-description">Class 11–12: Physics, Chemistry, Maths, Biology, English, Economics, Business Studies, Accountancy, Computer Science, etc.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card teaching">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-teaching position-category">Teaching</span>
+                            <h5 class="position-title">TGT (Trained Graduate Teacher)</h5>
+                            <p class="position-description">Class 6–10: Science, SST, Maths, Hindi, English, Sanskrit, etc.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card teaching">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-teaching position-category">Teaching</span>
+                            <h5 class="position-title">PRT (Primary Teacher)</h5>
+                            <p class="position-description">Class 1–5: General subjects</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card teaching">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-teaching position-category">Teaching</span>
+                            <h5 class="position-title">Nursery/KG Teacher</h5>
+                            <p class="position-description">Pre-primary: Early childhood education</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card teaching">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-teaching position-category">Teaching</span>
+                            <h5 class="position-title">Montessori Teacher</h5>
+                            <p class="position-description">Play-way teaching method for toddlers</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card teaching">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-teaching position-category">Teaching</span>
+                            <h5 class="position-title">Language Teacher</h5>
+                            <p class="position-description">Hindi, Sanskrit, French, German, etc.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card teaching">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-teaching position-category">Teaching</span>
+                            <h5 class="position-title">Computer Teacher</h5>
+                            <p class="position-description">Basics of computers, programming, coding</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card teaching">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-teaching position-category">Teaching</span>
+                            <h5 class="position-title">Physical Education Teacher</h5>
+                            <p class="position-description">Sports, yoga, physical training</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card teaching">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-teaching position-category">Teaching</span>
+                            <h5 class="position-title">Art & Craft Teacher</h5>
+                            <p class="position-description">Drawing, painting, crafts</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card teaching">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-teaching position-category">Teaching</span>
+                            <h5 class="position-title">Music Teacher</h5>
+                            <p class="position-description">Vocal / instrumental</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card teaching">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-teaching position-category">Teaching</span>
+                            <h5 class="position-title">Dance Teacher</h5>
+                            <p class="position-description">Classical / Western dance</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card teaching">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-teaching position-category">Teaching</span>
+                            <h5 class="position-title">Special Educator</h5>
+                            <p class="position-description">Children with special needs</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card teaching">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-teaching position-category">Teaching</span>
+                            <h5 class="position-title">Remedial Teacher</h5>
+                            <p class="position-description">Helps students who need extra academic support</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card teaching">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-teaching position-category">Teaching</span>
+                            <h5 class="position-title">Counselor</h5>
+                            <p class="position-description">Mental health, career guidance</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card teaching">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-teaching position-category">Teaching</span>
+                            <h5 class="position-title">Librarian</h5>
+                            <p class="position-description">Manages the library, reading programs</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card teaching">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-teaching position-category">Teaching</span>
+                            <h5 class="position-title">Lab Assistant</h5>
+                            <p class="position-description">Supports science practical sessions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ========== LEADERSHIP POSITIONS ========== -->
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card leadership" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-leadership position-category">Leadership</span>
+                            <h5 class="position-title">Principal</h5>
+                            <p class="position-description">Head of the school; overall academic and administrative management</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card leadership" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-leadership position-category">Leadership</span>
+                            <h5 class="position-title">Vice Principal</h5>
+                            <p class="position-description">Supports the principal in academic affairs</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card leadership" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-leadership position-category">Leadership</span>
+                            <h5 class="position-title">Headmistress/Headmaster</h5>
+                            <p class="position-description">In charge of a particular section (Primary, Middle, etc.)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card leadership" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-leadership position-category">Leadership</span>
+                            <h5 class="position-title">Academic Coordinator</h5>
+                            <p class="position-description">Coordinates teaching plans, curriculum, and schedules</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card leadership" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-leadership position-category">Leadership</span>
+                            <h5 class="position-title">Head of Department (HOD)</h5>
+                            <p class="position-description">Oversees a subject department (e.g., English, Science)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card leadership" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-leadership position-category">Leadership</span>
+                            <h5 class="position-title">Curriculum Designer</h5>
+                            <p class="position-description">Designs learning outcomes and teaching strategies</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card leadership" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-leadership position-category">Leadership</span>
+                            <h5 class="position-title">School Director</h5>
+                            <p class="position-description">Strategic leadership (especially in private/chain schools)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ========== ADMINISTRATIVE STAFF ========== -->
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card admin" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-admin position-category">Admin</span>
+                            <h5 class="position-title">Admin Officer/Manager</h5>
+                            <p class="position-description">Manages office operations, vendors, compliance</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card admin" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-admin position-category">Admin</span>
+                            <h5 class="position-title">Front Desk/Receptionist</h5>
+                            <p class="position-description">Handles calls, visitors, inquiries</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card admin" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-admin position-category">Admin</span>
+                            <h5 class="position-title">Accountant</h5>
+                            <p class="position-description">Manages school finances, fee collection</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card admin" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-admin position-category">Admin</span>
+                            <h5 class="position-title">Fee Clerk/Cashier</h5>
+                            <p class="position-description">Deals with student fee transactions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card admin" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-admin position-category">Admin</span>
+                            <h5 class="position-title">HR Manager/Executive</h5>
+                            <p class="position-description">Handles hiring, staff records, payroll</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card admin" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-admin position-category">Admin</span>
+                            <h5 class="position-title">Transport In-Charge</h5>
+                            <p class="position-description">Manages bus routes, drivers, safety checks</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card admin" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-admin position-category">Admin</span>
+                            <h5 class="position-title">Exam Coordinator</h5>
+                            <p class="position-description">Handles exam schedules, paper management</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card admin" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-admin position-category">Admin</span>
+                            <h5 class="position-title">Data Entry Operator</h5>
+                            <p class="position-description">Maintains school records, databases</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card admin" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-admin position-category">Admin</span>
+                            <h5 class="position-title">Storekeeper</h5>
+                            <p class="position-description">Manages school inventory and stationery</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card admin" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-admin position-category">Admin</span>
+                            <h5 class="position-title">IT Support/Technician</h5>
+                            <p class="position-description">Maintains computer labs, projectors, software</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ========== SUPPORT STAFF ========== -->
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card support" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-support position-category">Support</span>
+                            <h5 class="position-title">Peon/Office Attendant</h5>
+                            <p class="position-description">Delivers files, supports teachers/admin staff</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card support" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-support position-category">Support</span>
+                            <h5 class="position-title">Sweeper/Housekeeping</h5>
+                            <p class="position-description">Maintains cleanliness of school premises</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card support" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-support position-category">Support</span>
+                            <h5 class="position-title">Security Guard</h5>
+                            <p class="position-description">Ensures safety of school property and students</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card support" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-support position-category">Support</span>
+                            <h5 class="position-title">Electrician</h5>
+                            <p class="position-description">Fixes wiring, lights, power backup systems</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card support" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-support position-category">Support</span>
+                            <h5 class="position-title">Plumber</h5>
+                            <p class="position-description">Maintains taps, water pipes, washrooms</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card support" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-support position-category">Support</span>
+                            <h5 class="position-title">Driver</h5>
+                            <p class="position-description">School bus or official vehicle driver</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card support" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-support position-category">Support</span>
+                            <h5 class="position-title">Bus Attendant</h5>
+                            <p class="position-description">Helps children board/deboard buses safely</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card support" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-support position-category">Support</span>
+                            <h5 class="position-title">Gardener/Mali</h5>
+                            <p class="position-description">Maintains lawns, gardens, plants</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card support" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-support position-category">Support</span>
+                            <h5 class="position-title">Ayah/Helper</h5>
+                            <p class="position-description">Assists in pre-primary/nursery sections</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card support" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-support position-category">Support</span>
+                            <h5 class="position-title">Cook/Kitchen Helper</h5>
+                            <p class="position-description">If the school has a mess or canteen</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-4 col-md-6 position-card support" style="display:none;">
+                    <div class="card h-100">
+                        <div class="card-body position-relative">
+                            <span class="badge badge-support position-category">Support</span>
+                            <h5 class="position-title">Watchman/Night Guard</h5>
+                            <p class="position-description">Security during non-working hours</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- View All Button -->
+            <div class="text-center mt-5">
+                <button class="btn btn-primary btn-lg" id="viewAllBtn">
+                    <i class="fas fa-eye me-2"></i>View All Positions
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Tab switching functionality
+            const tabs = document.querySelectorAll('.category-tab');
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    const category = this.getAttribute('data-category');
+                    
+                    if (category === 'all') {
+                        // Show all positions
+                        document.querySelectorAll('.position-card').forEach(card => {
+                            card.style.display = 'block';
+                        });
+                    } else {
+                        // Hide all positions first
+                        document.querySelectorAll('.position-card').forEach(card => {
+                            card.style.display = 'none';
+                        });
+                        // Show only selected category
+                        document.querySelectorAll(`.position-card.${category}`).forEach(card => {
+                            card.style.display = 'block';
+                        });
+                    }
+                });
+            });
+            
+            // View All button functionality
+            document.getElementById('viewAllBtn').addEventListener('click', function() {
+                // Remove active class from all tabs
+                tabs.forEach(t => t.classList.remove('active'));
+                // Add active class to first tab
+                tabs[0].classList.add('active');
+                
+                // Show all positions
+                document.querySelectorAll('.position-card').forEach(card => {
+                    card.style.display = 'block';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
